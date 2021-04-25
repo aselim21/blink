@@ -24,7 +24,10 @@ Now to build, run:
 rustup override set nightly
 
 # Ensure time delays are consistent with a 16MHz microcontroller.
-export AVR_CPU_FREQUENCY_HZ=16000000
+//for unix
+export AVR_CPU_FREQUENCY_HZ=16000000 
+//for windows terminal
+set AVR_CPU_FREQUENCY_HZ=16000000 
 
 # Compile the crate to an ELF executable.
 cargo build -Z build-std=core --target avr-atmega328p.json --release
